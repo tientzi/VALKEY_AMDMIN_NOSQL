@@ -1,0 +1,251 @@
+.orders-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.orders-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.order-card-item {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+}
+
+.order-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid var(--gray-100);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--gray-500);
+}
+
+.order-meta-info strong {
+  color: var(--dark);
+}
+
+.dot {
+  color: var(--gray-300);
+}
+
+.status-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.badge-warning {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.badge-info {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.badge-primary {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.badge-success {
+  background-color: var(--secondary-light);
+  color: var(--secondary);
+}
+
+.badge-danger {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.order-item-products {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--gray-100);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.item-prod-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.item-prod-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background-color: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  padding: 0.25rem;
+}
+
+.item-prod-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item-prod-details h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-light);
+}
+
+.item-prod-details span {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+}
+
+.item-prod-price {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.order-item-footer {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.order-shipping-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gray-500);
+}
+
+.order-shipping-details strong {
+  color: var(--dark);
+}
+
+.order-payment-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background-color: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-100);
+}
+
+.payment-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--gray-500);
+}
+
+.text-discount-row {
+  color: var(--primary);
+}
+
+.final-row {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.final-row span {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.final-row strong {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.payment-method-badge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--gray-200);
+  color: var(--dark-light);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-top: 0.5rem;
+}
+
+.cancel-order-btn {
+  margin-top: 1rem;
+  padding: 0.5rem !important;
+  font-size: 0.85rem !important;
+  width: 100%;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.cancel-order-btn:hover {
+  background-color: #fee2e2;
+  color: #ef4444;
+  border-color: #ef4444;
+  transform: none;
+}
+
+.order-alert {
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.empty-orders-state {
+  background-color: var(--white);
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.empty-icon {
+  color: var(--gray-300);
+}
+
+.empty-orders-state h3 {
+  font-size: 1.5rem;
+  color: var(--dark-light);
+}
+
+.empty-orders-state p {
+  color: var(--gray-400);
+  max-width: 450px;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .order-item-footer {
+    grid-template-columns: 1fr;
+  }
+}

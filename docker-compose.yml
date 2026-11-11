@@ -1,0 +1,49 @@
+services:
+  valkey:
+    image: valkey/valkey:8
+    container_name: minimart_valkey_db
+    command: ["valkey-server", "--appendonly", "yes"]
+    volumes:
+      - valkey_data:/data
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 3s
+      timeout: 2s
+      retries: 20
+
+  valkey-admin:
+    image: valkey/valkey-admin:1.1.1
+    container_name: minimart_valkey_admin
+    ports:
+      - "18080:8080"
+    environment:
+      PORT: 8080
+      VALKEY_HOST: valkey
+      VALKEY_PORT: 6379
+      VITE_LOCAL_VALKEY_HOST: valkey
+      VITE_LOCAL_VALKEY_PORT: 6379
+      VITE_LOCAL_VALKEY_NAME: MiniMart Valkey NoSQL
+    depends_on:
+      valkey:
+        condition: service_healthy
+
+  app:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: minimart_valkey_app
+    volumes:
+      - ./uploads:/app/uploads
+    ports:
+      - "13000:3000"
+    environment:
+      PORT: 3000
+      VALKEY_URL: redis://valkey:6379
+      VALKEY_ADMIN_URL: http://localhost:18080
+      PAYMENT_TTL_SECONDS: 30
+    depends_on:
+      valkey:
+        condition: service_healthy
+
+volumes:
+  valkey_data:

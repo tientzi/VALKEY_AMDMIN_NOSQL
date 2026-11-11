@@ -1,0 +1,22 @@
+{
+  "name": "minimart-valkey-nosql",
+  "version": "3.0.0",
+  "private": true,
+  "description": "MiniMart dùng Valkey làm cơ sở dữ liệu NoSQL duy nhất",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase-admin": "^14.5.0",
+    "multer": "^2.4.0",
+    "redis": "^4.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

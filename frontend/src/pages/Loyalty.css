@@ -1,0 +1,705 @@
+/* ==========================================================================
+   MINIMART PRIVILEGE CLUB - LUXURY MINIMALIST DESIGN SYSTEM
+   Phong cách: Sang trọng, tối giản, tinh tế, không màu mè
+   ========================================================================== */
+
+.loyalty-page {
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #0f172a;
+}
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  gap: 1rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.spinner-dot {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #e2e8f0;
+  border-top-color: #0f172a;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 1. Header Banner - Tối giản, thanh lịch */
+.loyalty-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  color: #334155;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.loyalty-header h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.6rem;
+}
+
+.loyalty-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.loyalty-section {
+  margin-bottom: 4rem;
+}
+
+/* 2. Unified Luxury Membership Card */
+.membership-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.unified-luxury-card {
+  width: 100%;
+  max-width: 820px; /* Thu gọn bề rộng của thẻ để cân đối */
+  margin: 0 auto;
+  min-height: 330px; /* Tăng chiều cao của thẻ */
+  border-radius: 26px;
+  padding: 2.8rem 3rem; /* Tăng padding để thẻ cao và thoáng hơn */
+  color: #ffffff;
+  box-shadow: 0 25px 50px -15px rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.unified-luxury-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.55);
+}
+
+.unified-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.brand-group .brand-name {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.brand-group .brand-sub {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 3px;
+}
+
+.tier-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid;
+  font-size: 0.9rem;
+  font-weight: 700;
+  backdrop-filter: blur(12px);
+}
+
+/* Card Body: 2 Columns inside the single luxury card */
+.unified-card-body {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.8rem;
+  align-items: center;
+  min-height: 180px;
+}
+
+@media (max-width: 880px) {
+  .unified-luxury-card {
+    padding: 2rem 1.8rem;
+  }
+  .unified-card-body {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
+
+.unified-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.unified-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-caption {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.unified-meta-item .meta-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.privilege-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.points-meta-block .points-display-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.points-display-row .points-big {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.points-display-row .points-big small {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 2px;
+}
+
+.points-display-row .conversion-tip {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3px 10px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+
+/* Progress column within unified card */
+.unified-progress-col {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 1.6rem;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.milestone-box-unified {
+  margin-bottom: 1.2rem;
+}
+
+.milestone-box-unified .meta-caption {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.milestone-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.milestone-text strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.milestone-text.vip-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.progress-track-unified {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+}
+
+.progress-fill-unified {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.progress-meta-row-unified {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.current-step-unified {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.next-step-unified {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.milestone-text.vip-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.progress-track-unified {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+}
+
+.progress-fill-unified {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.progress-meta-row-unified {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.current-step-unified {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.next-step-unified {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 3. Block Header & Grid 4 Hạng Đặc Quyền */
+.block-header {
+  margin-bottom: 1.8rem;
+}
+
+.block-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.3rem 0;
+}
+
+.block-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+}
+
+@media (max-width: 1024px) {
+  .tiers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tiers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tier-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.6rem 1.4rem;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.02);
+}
+
+.tier-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.tier-card.is-active {
+  border: 2px solid #0f172a;
+  box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.12);
+}
+
+.active-tag {
+  position: absolute;
+  top: -11px;
+  right: 14px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tier-card-head {
+  margin-bottom: 1.2rem;
+}
+
+.tier-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.tier-card-head h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.tier-threshold {
+  font-size: 0.82rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.tier-card-discount {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px;
+  padding: 9px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 1.4rem;
+}
+
+.discount-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.discount-value {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.tier-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: #334155;
+  flex-grow: 1;
+}
+
+.tier-perks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  line-height: 1.45;
+}
+
+.check-svg {
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* 4. Kho Mã Giảm Giá - Minimalist Luxury Ticket */
+.vouchers-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.8rem;
+}
+
+.btn-shop-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-shop-link:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.vouchers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .vouchers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.voucher-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.voucher-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Cột trái: Sang trọng, nền tối tối giản */
+.voucher-left {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 1.6rem 1.3rem;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.voucher-type-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.voucher-value-text {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 4px 0;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.voucher-sub-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #94a3b8;
+}
+
+/* Đường cắt vé với khuyết tròn mềm mại */
+.voucher-divider {
+  width: 0;
+  position: relative;
+  border-left: 1px dashed #cbd5e1;
+}
+
+.voucher-divider .notch {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: -8px;
+  border: 1px solid #e2e8f0;
+}
+
+.voucher-divider .notch-top {
+  top: -9px;
+  clip-path: inset(50% 0 0 0);
+}
+
+.voucher-divider .notch-bottom {
+  bottom: -9px;
+  clip-path: inset(0 0 50% 0);
+}
+
+/* Cột phải: Thông tin rõ ràng, sạch sẽ */
+.voucher-right {
+  padding: 1.4rem 1.6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.voucher-code-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.code-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  background: #f8fafc;
+  padding: 4px 10px;
+  border-radius: 7px;
+  border: 1px solid #e2e8f0;
+  letter-spacing: 1px;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.copy-btn.is-copied {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+.voucher-info {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0 0 0.8rem 0;
+}
+
+.voucher-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: #64748b;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 0.6rem;
+}
+
+.condition-item strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.empty-vouchers {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  border: 1px dashed #cbd5e1;
+  background: #f8fafc;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
